@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unchained</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Tela de início para burlar o bloqueio de áudio do navegador */
+        .tela-inicio {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #121f0d;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            cursor: pointer;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .tela-inicio p {
+            font-family: 'Press Start 2P', monospace;
+            color: #c8ff79;
+            font-size: 14px;
+            animation: piscar 1.2s infinite;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        @keyframes piscar {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .tela-inicio.esconder {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="tela-start" class="tela-inicio">
+        <p>CLIQUE EM QUALQUER LUGAR<br>PARA ENTRAR</p>
+    </div>
+
+    <main class="celular-container">
+        <audio id="bg-musica" src="musica.mp3" loop></audio>
+
+        <img src="Sprite-0002.gif" alt="Cenário Pixel Art" class="pixel-arte">
+
+        <button id="btn-toggle" class="btn-controle">Esconder Texto</button>
+
+        <div id="camada-opaca" class="overlay">
+            <div class="caixa-texto">
+                <p>Oi rafaela.</p>
+                <p>Sei que você não tinha interesse em saber nada a meu respeito, peço perdão, mas realmente não tinha como eu deixar de te falar algumas coisas.</p>
+                <p>Essa carta é bem diferente das desculpas e promessas que te fiz e não cumpri, bem diferente mesmo.</p>
+                <p>Você deve lembrar das palavras que falei todas as vezes que você brigou comigo ou das vezes que terminou comigo.</p>
+                <p>Eu sempre prometia que ia parar, eu assumia a culpa apesar de tentar dizer que eu me sentia alguem viciado e que precisava de ajuda.</p>
+                <p>Lembro ter dito pra você, mesmo querendo que me aceitasse de volta, que mesmo eu entendendo o quão era errado, eu não sentia dentro de mim a culpa que eu deveria sentir, mesmo você falando pra mim o quanto te chateava e eu entendia tudo que você dizia.</p>
+                <p>Você deve lembrar tambem que eu falei que sentia essa vontade de consumir esse lixo, e pedi que me ajudasse olhando o que eu acessava, e você, com razão, se chateou e disse que isso não deveria ser tarefa sua.</p>
+                <p>Busquei psicólogo por que sentia que era algo que fazia parte de mim, eu sentia a vontade irracional de consumir pornografia e, independente do quanto eu tentasse pesquisar, me distrair, ouvir podcasts sobre o assunto, o problema é que eu tinha aquela vontade, e o que eu estava tentando fazer era controlar ela o máximo na esperança de que fosse melhorar com o tempo.</p>
+                <p>O que quero dizer com isso é que eu te prometia que ia parar, que ia tirar isso de mim e que eu sempre disse que tinha algo de errado comigo e eu falava que era algo simples mas eu continuava tendo essa vontade.</p>
+                <p>Nesse momento claro que não quero tirar nenhuma culpa de mim, o assunto é outro. Rafaela, sei que vai parecer mentira e é dificil acreditar, e realmente não caiu a fixa pra mim ainda, mas tem quase um mês que sumiu completamente a vontade de consumir pornografia, com certeza parece mentira ou exagero, achava que ninguém acreditaria, eu não consigo acreditar quando paro pra pensar.</p>
+                <p>O que mais me impressiona (me frustra por não ter acontecido antes) é que eu praticamente não tive esforço algum pra isso acontecer, não é que eu consigo evitar pensar em consumir, simplesmente não tenho mais esse pensamento e não tenho a vontade em nenhum momento.</p>
+                <p>Com certeza parece que eu estou falando isso pra te convencer, que é mais uma invenção, que eu não estou falando a verdade completa, mas não estou aumentando nada nem vou omitir nada, vou dar todos os detalhes, até os horríveis, então vai ser uma carta um pouco grande.</p>
+                <p>Como você sabe, comecei a consumir isso desde criança, e até hoje não lembro de nenhum período que passei na vida sem sentir a necessidade de consumir, até onde tenho memória era algo da minha rotina e que eu sentia essa vontade frequentemente de consumir, mesmo que não tivesse um gatilho a vontade vinha do nada.</p>
+                <p>Terminamos e brigamos varias vezes e todas as vezes, independente do quanto eu soubesse que te fazia mal, que me fazia mal, que era errado, independente do quão triste eu estivesse e queria parar, a vontade continuava, e o que eu podia fazer era só prometer, por que eu não tinha certeza se tinha o poder de fazer essa vontade passar, e sim, no fim de tudo o que quero dizer é que isso sumiu “do nada” mesmo que ja tenhamos terminado e brigado outras vezes e comparado as outras vezes que tentei melhorar, dessa vez praticamente não fiz nada, não houve esforço, não “tentei” parar, simplesmente acordei, passou o dia todo sem vontade e sem pensar em consumir, no outro dia da mesma forma, e depois de mais ou menos uma semana te mandei o audio, falando isso, era muito cedo, não dava pra ter certeza de algo por causa de um sentimento de uma semana, mas você deve entender meu desespero por te ter de volta.</p>
+                <p>Essa vontade é tão horrivel que no mesmo dia que você terminou comigo, quando cheguei em casa senti vontade de consumir, pesquisei novamente como deixar esse vicio, e quando terminei deu vontade de consumir de novo, só tentei pensar que não precisava daquilo e consegui não consumir, porém a partir do dia seguinte eu não senti vontade, não tive pensamentos nem nada que me levasse a consumir.</p>
+                <p>Estava muito frustrado e como você não tinha intenção de conversar, consegui chamar Ubaldo pra conversar, só queria desabafar, contei tudo, tudo que fiz com você e tudo que sentia.</p>
+                <p>Acabou que ele disse que tinha TDAH e tudo que eu falei que eu sentia ele disse que sente ou ja sentiu, não só nesse aspecto mas varias coisas chatas que a gente passava decorrente de TDAH ou influência de consumo de pornografia.</p>
+                <p>Ele disse que sofreu muito com isso nos relacionamentos dele e que até hoje não conseguiu largar, disse que esse consumo tinha a ver com TDAH e eu realmente não imaginava, eu achava que ou era falta de caráter ou outro problema que deveria falar com a psicologa.</p>
+                <p>Eu contei a minha história com a psicologa, sobre ela ignorar quando eu falava sobre TDAH e disse que é muito frustrante ter que passar anos com acompanhamento pra ter um laudo, mas ele disse que não precisava ser assim, que conhecia uma pessoa que fez uma bateria de testes e em pouco tempo recebeu o laudo.</p>
+                <p>Conversei com mãe, falei o que eu sentia e ela entrou em contato com minha tia que conhecia uma clinica que faz essa avaliação neuropsicologica, ela disse que psicologo comum não da laudo, só neuropsicologo.</p>
+                <p>A avaliação completa leva no minimo 2 meses, são 1.950 reais, sexta-feira vai ser minha primeira sessão.</p>
+                <p>Eu sinto que não vou consumir mais essas coisas, não sinto interesse nem se tentar, mas confesso que tenho medo de sentir isso de novo, mesmo fazendo um mês sem sentir, e sei que você também não se sentiria segura, além de que também quero muito melhorar das outras coisas que o TDAH sempre me prejudicaram.</p>
+                <p>Bom, faz quase um mês, eu gostaria de ter esperado mais, por que eu sei que não posso simplesmente abrir meu cérebro e mostrar que não tenho mais aquele pensamento que me controlava nem abrir meu coração e mostrar que não tem mentira no que estou falando, e vi que você disse que não estava pronta pra me perdoar, mesmo que essa seja uma situação atípica.</p>
+                <p>Antes de continuar, queria dizer que mesmo que sejam situações diferentes, não pude deixar de notar a semelhança com o que aconteceu com meus estudos.</p>
+                <p>Quando me conheceu, eu ainda era o Fernando que nunca estudou na vida, nunca parei pra estudar, minha mãe sempre que recebia uma nota minha, quando pegava um boletim na minha mochila ela ficava uma hora reclamando comigo, chorava e eu também, eu jurava que ia começar a estudar mas mesmo querendo, não conseguia um dia.</p>
+                <p>Mesmo quando ela me obrigava a estudar eu “preferia” ficar fazendo nada fingindo que estava estudando.</p>
+                <p>E isso continuou. Por sorte passei no ENEM mas na faculdade era da mesma forma, ia apenas pra gastar o dinheiro que meu pai me dava pra passagem de ônibus e depois pra ir escalar e não estudar, era uma vergonha que passei a vida toda e não conseguia fazer algo diferente disso.</p>
+                <p>Você lembra que tomei a decisão de me matricular da faculdade ano passado e por algum motivo, desde o inicio eu estudei muito, e com o tempo só foi aumentando o quanto eu estudava, eu entregava as provas cada vez mais cedo e ia me empolgando cada vez mais, e até hoje sinto que é algo que faz parte de mim, não é uma euforia, eu posso passar duas, três semanas sem estudar que sei que quando voltar vai ser na mesma pegada, ao mesmo tempo que não caiu a fixa que sou assim agora, não consigo me ver da forma que eu era antes, era uma angustia se sentir um vagabundo e não conseguir fazer o que queria.</p>
+                <p>Agora estou me sentindo da mesma forma com esse assunto. Não é apenas a vontade de consumir que foi embora, eu consigo me sentir mal de lembrar e me sinto mal só de imaginar a possibilidade de eu imaginar, Tipo assim, eu não estou evitando de pensar em pornografia, com medo de ir consumir. Eu não penso e nem consigo pensar. Eu tentei uma vez, no dia que mandei o audio, imaginar algo que fosse me fazer querer consumir, mas eu não consegui por que eu finalmente senti o freio moral que eu sempre quis sentir.</p>
+                <p>Quando estava falando com Ubaldo eu estava tão sem acreditar que tentei parar e pensar algo que me fizesse ter a sensação que eu tinha que me fazia consumir, na hora não me toquei que poderia me prejudicar, mas aconteeceu que eu nem consegui iniciar o pensamento, apenas sentia culpa de fazer aquilo, mesmo sem ninguém vendo, que era o que eu precisava antes e não sentia.</p>
+                <p>Ubaldo até disse que eu não deveria tentar fazer isso, realmente não tentei mais, não consegui entender na hora que era melhor tentar me acalmar.</p>
+                <p>Nos primeiros dias eu pensava “e se der vontade agora do nada, será que vou consumir?” ao mesmo tempo que sentia que não era algo que valesse desejar, tipo, era como se eu tivesse me dado conta que não fazia sentido, não tinha graça, que eu realmente não precisava, era como se ficar quieto fosse melhor que consumir isso. Era como se antes essa vontade me fizesse sentir que ela “valia mais a pena que qualquer coisa”, e agora sinto tranquilamente que “qualquer coisa vale mais a pena de se fazer do que pensar e consumir aquilo”.</p>
+                <p>Nesse tempo que estou assim, percebi que é bem mais facil de enxergar muita coisa que não via, nem me dava conta, não passava pelo sentido, era como se aquilo cobrisse meu pensamento.</p>
+                <p>Sem querer fazer piada, mas as vezes que você me chamava de “Zé priqito”, eu não sei se era isso que você queria dizer, mas agora é como se tivesse caído um véu dos meus olhos e eu percebesse que era sua forma de reclamar que eu não estava mais te conquistando.</p>
+                <p>Eu te dava presentes, tentava ser romantico, útil, te dar carinho, passear com você mas isso é o básico, eu não te fazia sentir desejada por completo nem te provocava também, e além de perceber isso, também percebo como o consumo de porcaria acabou me moldando em certos aspectos que eu não percebia, juro que não percebia.</p>
+                <p>Por exemplo, tentava sempre priorizava seu prazer no nosso momento intimo, e eu achava que isso era o máximo, que eu era diferente dos outros homens por causa disso, que não era nada machista, e não percebia o que me era “ensinado” quando consumia lixo.</p>
+                <p>Quando eu falo que priorizo seu prazer, tem varias coisas erradas nessa frase.</p>
+                <p>Primeiro que vem a pressão pela performance que o machismo e a pornografia ensinam.</p>
+                <p>Quando falo que estou priorizando seu prazer, além de ser algo que serve pra se “gabar” ou se sentir alguém superior, na verdade você está priorizando o gozo da pessoa, dar prazer ao corpo mas não houve a conquista antes, não mostrei que desejo a pessoa, mas apenas o “priqito” e juro que era algo que eu estava perdido, não era por mal que isso acontecia.</p>
+                <p>Então não tem pra onde correr, é pornografia -> machismo -> objetificação. Você teve uma conversa séria comigo e expôs como você se sentia chateada quando eu pegava nos seus seios do nada, e minha reação foi de me sentir chateado, automativamente fiquei na defensiva não tentei entender e pensando agora, eu não tinha a capacidade de entender.</p>
+                <p>Qualquer pessoa na situação que você estava iria se sentir um objeto, que está lá pra servir de alivio pra alguém que não sabe controlar a própria ansiedade e as vontades, atropelando o que você sentia.</p>
+                <p>Sei o quanto é horrivel ler eu falando isso, mas provavelmente você sentia algo assim, e eu nem cogitava esse pensamento, e é uma das coisas que queria pedir perdão, mesmo que não mereça, queria dizer que sinto muito.</p>
+                <p>São coisas que não é que busquei entender, mas que sinto que estou enxergando de fora o problema, como se estivesse olhando pro meu eu do passado, como não sinto absolutamente nada do que estava sentindo antes, consigo pensar e analizar e agir sobre isso.</p>
+                <p>Como falei, essa carta não é de promessas, não prometo que vou tentar parar, não prometo que vou fazer de tudo pra não consumir, que não vou mentir. O que aconteceu foi um absurdo, é inacreditavel pra mim, o que eu sempre quis era que essa vontade fosse embora mas eu achava que uma pessoa normal quando era viciado sentia a mesma coisa, e conseguia parar por esforço, nem imaginava que tinha tanto a ver com TDAH, que um dia poderia acontecer da vontade sumir sem eu ter feito nada e não vou deixar essa vontade voltar, vou me medicar e fazer com que essa fase não perca o sentido, sempre quis me sentir uma pessoa normal, sem estar escondendo nada, demorou tanto pra tudo fazer um pouco de sentido.</p>
+                <p>Sentia que era algo que eu não controlava, não sabia o que causava isso, só fazia sentido pra mim que era culpa minha, a psicologa não queria investigar, e essa semana conversei com mãe sobre toda essa situação, e ela me disse que teve uma época que ela e pai me levavam pro psicologo (eu não lembro disso, só tinha memoria de ter ido uma vez e nunca mais ter ido) e no ultimo dia, quando iam dar o resultado, minha mãe não foi, e meu pai por não acreditar em psicologo escondeu pra sempre o resultado.</p>
+                <p>Não estou prometendo, é a minha vontade aproveitar essa fase, esse sentimento que nunca tive, e pensar em tudo que a pornografia trouxe de ruim pros meus pensamentos e comportamentos que eu não conseguia ver antes, ou que podia até ver mas não queria acreditar, e mudar eles, não sinto mais aquela vontade que me fazia me sentir um hipócrita sempre que criticava algo mas sentia algo muito pior.</p>
+                <p>Não é uma promessa por que nada me impede de fazer isso, não tem vergonha que me impeça de falar o que sinto, ficaria muito extenso falar aqui tudo que desabafei e absorvi de Ubaldo, Etni e Zezo quando conversei com eles sobre tudo isso, não senti vergonha de dizer o que sentia por que era tudo verdade, mas senti vergonha de dizer que ainda te amava, por que me sinto muito culpado de ter te magoado tanto e traído sua confiança.</p>
+                <p>Não é uma promessa de que vou parar de consumir. Eu sei que amanhã vou acordar do mesmo jeito ou melhor ainda que hoje, ainda com 0% de vontade de consumir e com vontade de melhorar e tentar reparar o máximo possivel tudo que te fiz.</p>
+                <p>É algo muito inesperado e como esse era praticamente meu único defeito é dificil de acreditar, mas mesmo que acredite, não tem como apagar o que você está sentindo agora, mesmo que agora tenha acontecido o que a gente sempre quis, você não pode simplesmente decidir me perdoar ou decidir que não vai sentir insegurança comigo.</p>
+                <p>E eu não vou julgar nem reclamar, tudo que estou falando é verdade e de coração, sei que não tem a ver com acreditar em mim mas que provavelmente você não me quer mais.</p>
+                <p>Sinto muito pelo que te fiz passar, sei que provavelmente ja não tenho mais chance com você, mesmo que você acredite em tudo que falei, você é um ser humano e não consegue decidir me amar apesar de tudo que passou, independente de como possa ser o futuro.</p>
+                <p>Se eu tiver muita sorte você está lendo essa carta ao invéz de jogar fora, então mesmo que ainda não me queira mais, saiba que você pra mim é a pessoa que eu queria passar o resto da vida, sinto muito pelo que te fiz passar, nós sabemos que não merecia nem de longe tudo isso.</p>
+                <p>Ainda tenho tanta coisa que queria conversar com você, mas que não cabe nessa carta, queria pelo menos te dizer algo, realmente queria estar com você nesse momento, depois de começar a entender o que era meu problema, só consigo sentir frustração por isso ter acontecido tão tarde e eu sempre pensar que a culpa era toda minha e te fazer pensar que você não era suficiente, realmente não tinha nada a ver com isso, todos os dias fico imaginando a gente junto de novo e você entendendo junto comigo qual era o problema, eu deixando meus outros defeitos por conta de TDAH e consumo de porcaria, queria muito que fosse real, queria voltar a ser seu.</p>
+                <p>Novamente, perdão por tudo, fique bem.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const btnToggle = document.getElementById('btn-toggle');
+        const camadaOpaca = document.getElementById('camada-opaca');
+        const musica = document.getElementById('bg-musica');
+        const telaStart = document.getElementById('tela-start');
+
+        // Configura o volume em 40% para uma música de fundo suave
+        musica.volume = 0.4;
+
+        // Quando clicar na tela de início, a música começa e a tela some
+        telaStart.addEventListener('click', () => {
+            musica.play().catch(err => console.log("Erro ao tocar áudio:", err));
+            telaStart.classList.add('esconder');
+        });
+
+        // Controle do botão de mostrar/esconder o texto
+        btnToggle.addEventListener('click', (evento) => {
+            evento.stopPropagation();
+
+            // Alterna a classe 'escondido' na camada opaca
+            camadaOpaca.classList.toggle('escondido');
+            
+            // Muda o texto do botão dependendo do estado
+            if (camadaOpaca.classList.contains('escondido')) {
+                btnToggle.textContent = 'Mostrar Texto';
+            } else {
+                btnToggle.textContent = 'Esconder Texto';
+            }
+        });
+    </script>
+</body>
+</html>

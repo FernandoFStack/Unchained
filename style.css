@@ -1,0 +1,139 @@
+/* Zerando as configurações padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #121f0d, #2a401f, #c8ff79);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container que limita o tamanho imitando uma tela de celular vertical no computador */
+.celular-container {
+    position: relative; /* Essencial para podermos posicionar elementos por cima da imagem */
+    height: 100vh; 
+    aspect-ratio: 128 / 228; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6); 
+    overflow: hidden;
+}
+
+/* Tratamento para Pixel Art na Web */
+.pixel-arte {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* --- ELEMENTOS DA INTERFACE (POR CIMA DA ARTE) --- */
+
+/* Botão de controle que fica sempre fixo no topo */
+.btn-controle {
+    position: absolute;
+    top: 20px;
+    z-index: 20; /* Fica acima da camada opaca */
+    padding: 10px 15px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: #fff;
+    background-color: #2a401f;
+    border: 2px solid #c8ff79;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-controle:hover {
+    background-color: #1a2a13;
+}
+
+.btn-controle:active {
+    transform: scale(0.95);
+}
+
+/* Camada branca opaca de destaque */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.45); /* Branco com 45% de opacidade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: opacity 0.4s ease, visibility 0.4s ease; /* Transição suave ao sumir */
+}
+
+/* Caixa onde o texto 8-bits fica centralizado */
+.caixa-texto {
+    padding: 20px;
+    width: 90%; /* Aumentei um pouco a largura para aproveitar melhor o espaço lateral */
+    max-height: 70vh; /* Limita a altura máxima para o texto longo não vazar para fora da tela */
+    overflow-y: auto; /* Se o texto for gigante, cria uma barra de rolagem pixelada sutil */
+    background-color: rgba(18, 31, 13, 0.88); 
+    border: 3px solid #c8ff79; 
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Configuração do Texto 8-bits */
+.caixa-texto p {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px; /* Reduzido de 11px para 8px: agora cabe MUITO mais texto */
+    line-height: 2; /* Espaçamento confortável entre as linhas */
+    color: #ffffff;
+    text-shadow: 1px 1px 0px #000; /* Ajustado o sombreado para a fonte menor */
+    text-align: left; /* MÁGICA: Alinha o texto à esquerda, linha por linha como um texto normal */
+    word-break: break-word; /* Garante que nenhuma palavra grande quebre o layout */
+}
+
+/* Classe utilitária para esconder a camada opaca via JS */
+.escondido {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Impede que clique em coisas invisíveis */
+}
+
+/* Ajuste automático para telas de celular real */
+@media (max-width: 480px) {
+    .celular-container {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        box-shadow: none;
+    }
+    
+    .btn-controle {
+        font-size: 8px; /* Diminui um pouco o botão no celular */
+        top: 15px;
+    }
+    
+    .caixa-texto p {
+        font-size: 9px; /* Ajusta o texto para telas menores */
+    }
+}
